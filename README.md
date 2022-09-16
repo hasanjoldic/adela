@@ -45,3 +45,6 @@ GET http://db.hasanjoldic.com:50000/reset-databases/<API_TOKEN>
 Replace `<API_TOKEN>` with the actual token value. It will be the same as database passwords.
 
 If you get a `200` response, that means the databases were reset.
+
+Easiest way to send a `GET` HTTP request is to just enter the url in a browser.
+This would be the url part: `http://db.hasanjoldic.com:50000/reset-databases/<API_TOKEN>`
