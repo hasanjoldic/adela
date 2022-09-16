@@ -36,5 +36,8 @@ services:
 
 volumes:
   adela.postgres:
+    name: adela.postgres
   adela.mysql:
+    name: adela.mysql
   adela.mongo:
+    name: adela.mongo
