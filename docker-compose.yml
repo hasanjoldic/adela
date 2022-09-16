@@ -33,16 +33,6 @@ services:
       - 27017:27017
     env_file:
       - .env
-  
-  adela.express:
-    build: .
-    image: adela.express
-    container_name: adela.express
-    restart: always
-    ports:
-      - ${API_PORT}:${API_PORT}
-    env_file:
-      - .env
 
 volumes:
   adela.postgres:

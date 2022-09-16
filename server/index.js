@@ -13,12 +13,13 @@ app.get("/reset-databases/:token", (req, res) => {
       `${path.resolve(__dirname, "../reset-databases.sh")}`,
       (error, stdout, stderr) => {
         if (error || stderr) {
+          console.error(error);
+          console.error(stderr);
           res.status(400).send();
         } else {
+          console.log(stdout);
           res.status(200).send();
         }
-        console.log(stdout);
-        console.error(stderr);
       }
     );
   }
