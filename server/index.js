@@ -1,9 +1,15 @@
 const path = require("path");
 const { execFile } = require("child_process");
 
+const dotenv = require("dotenv");
+
 const express = require("express");
 
+dotenv.config({ path: path.resolve(__dirname, "../.env") });
+
 const PORT = process.env.API_PORT;
+
+console.log({ PORT });
 
 const app = express();
 
