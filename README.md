@@ -61,4 +61,8 @@ If you get a `200` response, that means the databases were reset.
 Easiest way to send a `GET` HTTP request is to just enter the url in a browser.
 This would be the url part: `http://db.hasanjoldic.com:50000/reset-databases/<API_TOKEN>`
 
-You can also reset the databases by executing the `reset-databases.sh` script.
+You can also reset the databases by running:
+
+```
+cd /root/adela && ./reset-databases.sh
+```
