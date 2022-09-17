@@ -1,10 +1,16 @@
+## Connect to the host via ssh
+
+```
+ssh adela@db.hasanjoldic.com
+```
+
 ## Connecting to database servers
 
 `host=db.hasanjoldic.com` is the same for all databases
 
 `password` is also the same, but will not be saved in git
 
-postgres:
+### postgres:
 
 ```
   port=5432
@@ -12,14 +18,20 @@ postgres:
   user=postgres
 ```
 
-mysql:
+Connection command (from the host):
+
+```
+psql postgresql://postgres:<PASSWORD>@localhost:5432/postgres
+```
+
+### mysql:
 
 ```
   port=3306
   user=root
 ```
 
-mongo:
+### mongo:
 
 ```
   port=27017
@@ -48,3 +60,5 @@ If you get a `200` response, that means the databases were reset.
 
 Easiest way to send a `GET` HTTP request is to just enter the url in a browser.
 This would be the url part: `http://db.hasanjoldic.com:50000/reset-databases/<API_TOKEN>`
+
+You can also reset the databases by executing the `reset-databases.sh` script.
